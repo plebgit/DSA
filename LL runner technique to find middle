@@ -1,9 +1,9 @@
 def find_middle(linked_list):
-  fast= linked_list.head_node
-  slow= linked_list.head_node
-  while fast:
-    fast = fast.get_next_node()
-    if fast:
-      fast = fast.get_next_node()
-      slow = slow.get_next_node()
-  return slow
+  fast= linked_list.head_node     #fast pointer = LL head
+  slow= linked_list.head_node     #slow pointer = LL head
+  while fast:                     #loop through fast LL, while fast is not NONE
+    fast = fast.get_next_node()   #move fast pointer forward
+    if fast:                      #if end of LL has not been reached
+      fast = fast.get_next_node() #move fast pointer forward
+      slow = slow.get_next_node() #move slow pointer forward
+  return slow                     #return slow pointer
